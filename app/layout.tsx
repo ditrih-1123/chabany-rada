@@ -3,7 +3,7 @@ import { Geist_Mono } from "next/font/google";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import coatOfArms from "@/app/images/Coats_of_arms_of_Chabany.png";
+import siteFavicon from "@/app/images/new-favicon.png";
 
 import { fontProbaPro } from "./fonts";
 import "./globals.css";
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   title: "Чабанівська територіальна громада",
   description: "Офіційний вебпортал Чабанівської територіальної громади",
   icons: {
-    icon: [{ url: coatOfArms.src, type: "image/png" }],
-    shortcut: [{ url: coatOfArms.src, type: "image/png" }],
-    apple: [{ url: coatOfArms.src, type: "image/png" }],
+    icon: [{ url: siteFavicon.src, type: "image/png" }],
+    shortcut: [{ url: siteFavicon.src, type: "image/png" }],
+    apple: [{ url: siteFavicon.src, type: "image/png" }],
   },
 };
 

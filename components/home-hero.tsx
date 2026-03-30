@@ -41,6 +41,7 @@ function NewsCardOverlay({
   imageSrc,
   sizes,
   priority,
+  titleClassName,
 }: {
   tag: string;
   title: string;
@@ -50,6 +51,7 @@ function NewsCardOverlay({
   imageSrc: string | StaticImageData;
   sizes: string;
   priority?: boolean;
+  titleClassName?: string;
 }) {
   return (
     <Link
@@ -72,7 +74,13 @@ function NewsCardOverlay({
         <span className="mb-2 inline-block bg-[#1A6B20] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-white">
           {tag}
         </span>
-        <h3 className="text-[18px] font-semibold leading-[22px] text-white group-hover:underline">
+        <h3
+          className={cn(
+            "font-semibold text-white group-hover:underline",
+            titleClassName ??
+              "text-[18px] leading-[22px]",
+          )}
+        >
           {title}
         </h3>
         <p className="mt-2 text-[16px] text-white/80">{time}</p>
@@ -91,6 +99,7 @@ export function HomeHero() {
             className="lg:col-span-2 lg:min-h-[470px]"
             sizes="(max-width: 1024px) 100vw, 66vw"
             priority
+            titleClassName="text-[22px] leading-[28px] sm:text-[24px] sm:leading-[30px] lg:text-[28px] lg:leading-[34px]"
           />
           <div className="flex flex-col gap-4 lg:h-[470px]">
             {sideNews.map((item) => (
