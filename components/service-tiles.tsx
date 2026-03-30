@@ -44,12 +44,12 @@ export function ServiceTiles() {
             <Link
               key={label}
               href={href}
-              className="group flex items-center gap-4 text-left"
+              className="group flex items-center gap-3 text-left sm:gap-4"
             >
-              <div className="flex size-16 shrink-0 items-center justify-center rounded-full bg-[#1A6B20]/10 text-[#1A6B20] transition group-hover:bg-[#1A6B20]/15">
-                <Icon className="size-8 stroke-[1.9]" />
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#1A6B20]/10 text-[#1A6B20] transition group-hover:bg-[#1A6B20]/15 sm:size-14 md:size-16">
+                <Icon className="size-6 stroke-[1.9] sm:size-7 md:size-8" />
               </div>
-              <h3 className="text-[36px] font-semibold leading-[1] text-[#1A6B20] transition group-hover:text-[#124A16]">
+              <h3 className="min-w-0 text-2xl font-semibold leading-tight text-[#1A6B20] transition group-hover:text-[#124A16] sm:text-3xl md:text-4xl">
                 {label}
               </h3>
             </Link>

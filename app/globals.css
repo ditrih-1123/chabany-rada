@@ -217,25 +217,25 @@
   }
 
   h1 {
-    @apply font-sans text-[32px] font-medium not-italic leading-[36px];
+    @apply font-sans text-2xl font-medium not-italic leading-tight sm:text-3xl sm:leading-snug md:text-4xl;
   }
   h2 {
-    @apply font-sans text-[20px] font-bold leading-[28px];
+    @apply font-sans text-lg font-bold leading-snug sm:text-xl md:text-2xl;
   }
   h3 {
-    @apply font-sans text-[16px] font-semibold leading-[22px];
+    @apply font-sans text-base font-semibold leading-snug sm:text-lg;
   }
   h4 {
-    @apply font-sans text-[14px] font-semibold leading-[20px];
+    @apply font-sans text-sm font-semibold leading-snug sm:text-base;
   }
   h5 {
-    @apply font-sans text-[13px] font-semibold leading-[18px];
+    @apply font-sans text-xs font-semibold leading-snug sm:text-sm;
   }
   h6 {
-    @apply font-sans text-[12px] font-semibold leading-[16px];
+    @apply font-sans text-xs font-semibold leading-snug;
   }
   p {
-    @apply font-sans text-[14px] leading-[20px];
+    @apply font-sans text-sm leading-relaxed sm:text-base;
   }
 
   html {

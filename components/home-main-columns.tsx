@@ -215,7 +215,7 @@ const headNewsLines = [
 function SectionHeading({ children }: { children: ReactNode }) {
   return (
     <div className="mb-4 border-b border-zinc-300">
-      <h2 className="-mb-px inline-block border-b-4 border-[#1A6B20] pb-2 font-sans text-[24px] font-bold leading-normal tracking-normal text-black">
+      <h2 className="-mb-px inline-block border-b-4 border-[#1A6B20] pb-2 font-sans text-xl font-bold leading-snug tracking-normal text-black sm:text-2xl md:text-3xl">
         {children}
       </h2>
     </div>
@@ -245,13 +245,15 @@ function CategoryHeroCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 z-10 p-4">
-          <span className="mb-2 inline-block bg-[#1A6B20] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-white">
+          <span className="mb-2 inline-block bg-[#1A6B20] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-white sm:text-xs">
             {tag}
           </span>
-          <h3 className="text-[20px] font-semibold leading-[24px] text-white group-hover:underline">
+          <h3 className="text-lg font-semibold leading-snug text-white group-hover:underline sm:text-xl md:text-2xl">
             {title}
           </h3>
-          <p className="mt-2 text-[16px] text-white/85">{time}</p>
+          <p className="mt-2 text-sm leading-relaxed text-white/85 sm:text-base">
+            {time}
+          </p>
         </div>
       </div>
       <div className="sr-only">
@@ -289,13 +291,15 @@ function ThumbRow({
         <div className="min-w-0 flex-1">
           <h4
             className={cn(
-              "text-[18px] font-semibold leading-[22px] text-foreground group-hover:underline",
+              "text-base font-semibold leading-snug text-foreground group-hover:underline sm:text-lg",
               titleClassName,
             )}
           >
             {title}
           </h4>
-          <p className="mt-1 text-[16px] text-muted-foreground">{time}</p>
+          <p className="mt-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {time}
+          </p>
         </div>
       </div>
     </li>
@@ -322,10 +326,10 @@ function DocumentsFeatured({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
       <div className="relative z-10 flex min-h-[220px] flex-col justify-end p-4 lg:min-h-[260px]">
-        <span className="mb-2 inline-block w-fit bg-[#1A6B20] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-white">
+        <span className="mb-2 inline-block w-fit bg-[#1A6B20] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-white sm:text-xs">
           {tag}
         </span>
-        <h3 className="text-[20px] font-semibold leading-[24px] text-white group-hover:underline">
+        <h3 className="text-lg font-semibold leading-snug text-white group-hover:underline sm:text-xl md:text-2xl">
           {title}
         </h3>
       </div>
@@ -347,14 +351,14 @@ function PrioritiesGrid({
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {items.map(({ title, description, Icon }) => (
           <article key={title} className="flex items-start gap-6">
-            <div className="mt-0.5 inline-flex size-14 shrink-0 items-center justify-center rounded-full bg-[#1A6B20]/10 text-[#1A6B20]">
-              <Icon className="size-7" strokeWidth={1.9} />
+            <div className="mt-0.5 inline-flex size-12 shrink-0 items-center justify-center rounded-full bg-[#1A6B20]/10 text-[#1A6B20] sm:size-14">
+              <Icon className="size-6 sm:size-7" strokeWidth={1.9} />
             </div>
             <div className="min-w-0">
-              <h3 className="text-[18px] font-semibold leading-[22px] text-[#1A6B20]">
+              <h3 className="text-base font-semibold leading-snug text-[#1A6B20] sm:text-lg">
                 {title}
               </h3>
-              <p className="mt-1.5 text-[16px] leading-[22px] text-[#2d3a2f]">
+              <p className="mt-1.5 text-sm leading-relaxed text-[#2d3a2f] sm:text-base">
                 {description}
               </p>
             </div>
@@ -386,10 +390,10 @@ export function HomeMainColumns() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                 </div>
                 <div className="pt-3">
-                  <h3 className="text-[20px] font-semibold leading-[24px] text-[#1A6B20]">
+                  <h3 className="text-lg font-semibold leading-snug text-[#1A6B20] sm:text-xl md:text-2xl">
                     {kyivFeatured.title}
                   </h3>
-                  <p className="mt-2 text-[16px] text-muted-foreground">
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
                     {kyivFeatured.time}
                   </p>
                 </div>
@@ -409,7 +413,7 @@ export function HomeMainColumns() {
             <div className="mb-6 flex justify-end pb-6">
               <Link
                 href="#"
-                className="inline-flex items-center justify-center bg-[#1A6B20] px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-white transition hover:brightness-95"
+                className="inline-flex items-center justify-center bg-[#1A6B20] px-4 py-2.5 text-xs font-semibold uppercase tracking-wide text-white transition hover:brightness-95 sm:px-6 sm:text-sm"
               >
                 Продовження далі
               </Link>
@@ -459,10 +463,10 @@ export function HomeMainColumns() {
                     sizes="112px"
                   />
                 </div>
-                <p className="text-[18px] font-bold leading-[24px] tracking-wide text-foreground">
+                <p className="text-base font-bold leading-snug tracking-wide text-foreground sm:text-lg md:text-xl">
                   Олена Соболєва
                 </p>
-                <p className="mt-2 text-[16px] leading-[22px] text-muted-foreground">
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
                   Секретар Чабанівської селищної ради.
                 </p>
                 <SocialMediaLinks
@@ -512,25 +516,25 @@ export function HomeMainColumns() {
 
         <div className="mt-6 pt-6">
           <div className="mb-4 flex flex-col gap-6 border-b border-zinc-300 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="-mb-px inline-block min-w-0 border-b-4 border-[#1A6B20] pb-2 font-sans text-[24px] font-bold leading-normal tracking-normal text-black">
+            <h2 className="-mb-px inline-block min-w-0 border-b-4 border-[#1A6B20] pb-2 font-sans text-xl font-bold leading-snug tracking-normal text-black sm:text-2xl md:text-3xl">
               Селищна рада
             </h2>
             <Link
               href="#"
-              className="hidden items-center gap-6 text-[18px] font-semibold text-[#1A6B20] transition hover:underline sm:inline-flex"
+              className="hidden items-center gap-6 text-base font-semibold text-[#1A6B20] transition hover:underline sm:inline-flex sm:text-lg"
             >
               Усі новини
               <ArrowRightCircle className="size-5 shrink-0" strokeWidth={1.75} />
             </Link>
           </div>
-          <ul className="columns-1 gap-6 text-sm md:columns-2">
+          <ul className="columns-1 gap-6 text-sm sm:text-base md:columns-2">
             {headNewsLines.map((line) => (
               <li key={line.title} className="break-inside-avoid py-1.5">
                 <div className="group block text-[#1A6B20]">
-                  <span className="mb-1 block text-[16px] text-muted-foreground">
+                  <span className="mb-1 block text-sm leading-relaxed text-muted-foreground sm:text-base">
                     {line.time}
                   </span>
-                  <span className="text-[18px] font-normal leading-[22px]">
+                  <span className="text-base font-normal leading-snug sm:text-lg">
                     {line.title}
                   </span>
                 </div>
@@ -540,7 +544,7 @@ export function HomeMainColumns() {
           <div className="mt-6 flex justify-end sm:hidden">
             <Link
               href="#"
-              className="inline-flex items-center gap-6 text-[18px] font-semibold text-[#1A6B20] transition hover:underline"
+              className="inline-flex items-center gap-6 text-base font-semibold text-[#1A6B20] transition hover:underline sm:text-lg"
             >
               Усі новини
               <ArrowRightCircle className="size-5 shrink-0" strokeWidth={1.75} />

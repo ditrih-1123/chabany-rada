@@ -40,10 +40,10 @@ function GovUaBadge({ className }: { className?: string }) {
         <span className="min-h-0 flex-1 bg-[#ffd700]" />
       </span>
       <div className="min-w-0 flex flex-col leading-tight text-white">
-        <span className="text-sm font-bold uppercase tracking-wide sm:text-[15px]">
+        <span className="text-sm font-bold uppercase tracking-wide sm:text-base">
           GOV.UA
         </span>
-        <span className="text-xs font-normal leading-snug sm:text-[13px]">
+        <span className="text-xs font-normal leading-snug sm:text-sm">
           Державні сайти України
         </span>
       </div>
@@ -59,7 +59,7 @@ export function SiteHeader() {
       {/* Верхня смуга */}
       <div>
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-4 px-4 py-3 sm:flex-row sm:justify-center sm:gap-8 sm:px-6 sm:py-3.5 lg:justify-between lg:gap-5 lg:px-8">
-          <div className="flex w-full items-center justify-center sm:w-auto sm:justify-start">
+          <div className="flex w-full items-center justify-start sm:w-auto">
             <GovUaBadge />
           </div>
           <div className="flex max-w-md flex-col items-center gap-3 text-center sm:max-w-xl">
@@ -71,32 +71,32 @@ export function SiteHeader() {
               className="h-16 w-auto object-contain drop-shadow-md sm:h-20"
               priority
             />
-            <h1 className="text-center text-[32px] font-semibold leading-[36px] text-white">
+            <h1 className="text-center text-2xl font-semibold leading-tight text-white sm:text-3xl sm:leading-snug md:text-4xl">
               <span className="block">Чабанівська територіальна</span>
               <span className="block">громада</span>
             </h1>
-            <p className="text-[18px] font-normal leading-[24px] text-white/85">
+            <p className="text-base font-normal leading-relaxed text-white/85 sm:text-lg">
               Єдиний веб-портал селищної ради
             </p>
           </div>
           <div className="hidden w-full flex-col gap-2 lg:flex lg:w-auto lg:min-w-[12rem] lg:items-end">
             <Link
               href="#"
-              className="inline-flex items-center justify-center gap-2 text-[16px] font-medium text-white/95 transition hover:text-white lg:justify-end"
+              className="inline-flex items-center justify-center gap-2 text-sm font-medium text-white/95 transition hover:text-white sm:text-base lg:justify-end"
             >
               <UserRound className="size-4 shrink-0 opacity-95" strokeWidth={1.75} />
               Увійти в особистий кабінет
             </Link>
             <Link
               href="#"
-              className="inline-flex items-center justify-center gap-2 text-[16px] font-medium text-white/95 transition hover:text-white lg:justify-end"
+              className="inline-flex items-center justify-center gap-2 text-sm font-medium text-white/95 transition hover:text-white sm:text-base lg:justify-end"
             >
               <Eye className="size-4 shrink-0 opacity-95" strokeWidth={1.75} />
               Версія для людей з вадами зору
             </Link>
             <Link
               href="#"
-              className="inline-flex items-center justify-center gap-2 text-[16px] font-medium text-white/95 transition hover:text-white lg:justify-end"
+              className="inline-flex items-center justify-center gap-2 text-sm font-medium text-white/95 transition hover:text-white sm:text-base lg:justify-end"
             >
               <History className="size-4 shrink-0 opacity-95" strokeWidth={1.75} />
               Стара версія
@@ -110,7 +110,7 @@ export function SiteHeader() {
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-3 py-3 lg:flex-row lg:items-center lg:justify-between lg:py-0">
             <nav
-              className="hidden min-w-0 flex-1 flex-wrap items-center gap-x-5 gap-y-2 text-[18px] font-medium lg:flex"
+              className="hidden min-w-0 flex-1 flex-wrap items-center gap-x-5 gap-y-2 text-base font-medium lg:flex xl:text-lg"
               aria-label="Головне меню"
             >
               {navItems.map((item) => (
@@ -127,7 +127,7 @@ export function SiteHeader() {
             <div className="flex items-center justify-between gap-4 lg:hidden">
               <button
                 type="button"
-                className="inline-flex items-center gap-2 rounded-sm border border-white/20 px-3 py-2 text-sm font-medium"
+                className="inline-flex items-center gap-2 rounded-sm border border-white/20 px-3 py-2 text-xs font-medium sm:text-sm"
                 onClick={() => setOpen((v) => !v)}
                 aria-expanded={open}
                 aria-controls="mobile-nav-chabanivska"
@@ -139,7 +139,7 @@ export function SiteHeader() {
                 <SocialMediaLinks className="gap-3 sm:gap-4" />
                 <Link
                   href="#"
-                  className="inline-flex items-center gap-2 text-sm font-medium"
+                  className="inline-flex items-center gap-2 text-xs font-medium sm:text-sm"
                 >
                   <Search className="size-5" />
                   Пошук
@@ -157,7 +157,7 @@ export function SiteHeader() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="text-[18px] font-medium"
+                    className="text-base font-medium sm:text-lg"
                     onClick={() => setOpen(false)}
                   >
                     {item.label}
@@ -166,7 +166,7 @@ export function SiteHeader() {
                 <div className="mt-2 flex flex-col gap-2 border-t border-white/15 pt-4">
                   <Link
                     href="#"
-                    className="inline-flex items-center gap-2 text-[16px] font-medium text-white/95 transition hover:text-white"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-white/95 transition hover:text-white sm:text-base"
                     onClick={() => setOpen(false)}
                   >
                     <UserRound className="size-4 shrink-0 opacity-95" strokeWidth={1.75} />
@@ -174,7 +174,7 @@ export function SiteHeader() {
                   </Link>
                   <Link
                     href="#"
-                    className="inline-flex items-center gap-2 text-[16px] font-medium text-white/95 transition hover:text-white"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-white/95 transition hover:text-white sm:text-base"
                     onClick={() => setOpen(false)}
                   >
                     <Eye className="size-4 shrink-0 opacity-95" strokeWidth={1.75} />
@@ -182,7 +182,7 @@ export function SiteHeader() {
                   </Link>
                   <Link
                     href="#"
-                    className="inline-flex items-center gap-2 text-[16px] font-medium text-white/95 transition hover:text-white"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-white/95 transition hover:text-white sm:text-base"
                     onClick={() => setOpen(false)}
                   >
                     <History className="size-4 shrink-0 opacity-95" strokeWidth={1.75} />
@@ -196,7 +196,7 @@ export function SiteHeader() {
               <SocialMediaLinks className="gap-3 sm:gap-4" />
               <Link
                 href="#"
-                className="inline-flex items-center gap-2 text-sm font-medium transition hover:text-white/90"
+                className="inline-flex items-center gap-2 text-xs font-medium transition hover:text-white/90 sm:text-sm"
               >
                 <Search className="size-5" />
                 Пошук

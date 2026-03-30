@@ -71,19 +71,21 @@ function NewsCardOverlay({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
       <div className="relative z-10 p-4 sm:p-5">
-        <span className="mb-2 inline-block bg-[#1A6B20] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-white">
+        <span className="mb-2 inline-block bg-[#1A6B20] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-white sm:text-xs">
           {tag}
         </span>
         <h3
           className={cn(
             "font-semibold text-white group-hover:underline",
             titleClassName ??
-              "text-[18px] leading-[22px]",
+              "text-base leading-snug sm:text-lg sm:leading-snug",
           )}
         >
           {title}
         </h3>
-        <p className="mt-2 text-[16px] text-white/80">{time}</p>
+        <p className="mt-2 text-sm leading-relaxed text-white/80 sm:text-base">
+          {time}
+        </p>
       </div>
     </Link>
   );
@@ -99,7 +101,7 @@ export function HomeHero() {
             className="lg:col-span-2 lg:min-h-[470px]"
             sizes="(max-width: 1024px) 100vw, 66vw"
             priority
-            titleClassName="text-[22px] leading-[28px] sm:text-[24px] sm:leading-[30px] lg:text-[28px] lg:leading-[34px]"
+            titleClassName="text-lg leading-tight sm:text-xl sm:leading-snug md:text-2xl lg:text-3xl lg:leading-tight"
           />
           <div className="flex flex-col gap-4 lg:h-[470px]">
             {sideNews.map((item) => (
