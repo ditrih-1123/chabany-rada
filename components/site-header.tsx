@@ -55,11 +55,11 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-[linear-gradient(180deg,#149B19_0%,#1A6B20_48%,#145c18_100%)] text-white shadow-md sm:bg-[radial-gradient(circle_at_center,#149B19_0%,#1A6B20_28%,#124A16_100%)]">
+    <header className="w-full min-w-0 bg-[linear-gradient(180deg,#149B19_0%,#1A6B20_48%,#145c18_100%)] text-white shadow-md sm:bg-[radial-gradient(circle_at_center,#149B19_0%,#1A6B20_28%,#124A16_100%)]">
       {/* Верхня смуга */}
       <div>
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-3 sm:flex-row sm:justify-center sm:gap-8 sm:py-3.5 lg:justify-between lg:gap-5 lg:px-8">
-          <div className="flex w-full items-center justify-between sm:w-auto sm:justify-start">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-4 px-4 py-3 sm:flex-row sm:justify-center sm:gap-8 sm:px-6 sm:py-3.5 lg:justify-between lg:gap-5 lg:px-8">
+          <div className="flex w-full items-center justify-center sm:w-auto sm:justify-start">
             <GovUaBadge />
           </div>
           <div className="flex max-w-md flex-col items-center gap-3 text-center sm:max-w-xl">
@@ -107,7 +107,7 @@ export function SiteHeader() {
 
       {/* Головна навігація */}
       <div>
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-3 py-3 lg:flex-row lg:items-center lg:justify-between lg:py-0">
             <nav
               className="hidden min-w-0 flex-1 flex-wrap items-center gap-x-5 gap-y-2 text-[18px] font-medium lg:flex"

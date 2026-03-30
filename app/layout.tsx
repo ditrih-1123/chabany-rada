@@ -38,7 +38,7 @@ export default function RootLayout({
       className={`${fontProbaPro.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body
-        className={`${fontProbaPro.className} flex min-h-full flex-col`}
+        className={`${fontProbaPro.className} flex min-h-full w-full min-w-0 flex-col`}
       >
         <SiteHeader />
         {children}

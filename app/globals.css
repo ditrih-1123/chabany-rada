@@ -238,10 +238,11 @@
     @apply font-sans text-[14px] leading-[20px];
   }
 
-  body {
-    @apply font-sans bg-background text-foreground;
-  }
   html {
-    @apply font-sans;
+    @apply font-sans overflow-x-hidden;
+  }
+
+  body {
+    @apply w-full min-w-0 overflow-x-hidden font-sans bg-background text-foreground;
   }
 }

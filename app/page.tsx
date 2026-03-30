@@ -3,7 +3,7 @@ import { HomeMainColumns } from "@/components/home-main-columns";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col bg-white">
+    <main className="flex w-full min-w-0 flex-1 flex-col bg-white">
       <HomeHero />
       <HomeMainColumns />
     </main>

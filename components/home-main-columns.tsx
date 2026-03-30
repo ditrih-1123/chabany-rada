@@ -367,8 +367,8 @@ function PrioritiesGrid({
 
 export function HomeMainColumns() {
   return (
-    <section className="bg-white py-6 lg:py-8">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+    <section className="w-full bg-white py-6 lg:py-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-12 lg:gap-6">
           <div className="lg:col-span-8">
             <SectionHeading>Київщина</SectionHeading>
@@ -489,13 +489,12 @@ export function HomeMainColumns() {
 
             <div>
               <SectionHeading>Ми в Facebook</SectionHeading>
-              <div className="overflow-hidden rounded-none border border-border bg-white">
+              <div className="mx-auto w-full max-w-full overflow-hidden rounded-none border border-border bg-white">
                 <iframe
                   title="Facebook сторінка Чабанівської селищної ради"
                   src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchabany.rada.gov.ua&tabs=timeline&width=500&height=340&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                  width="500"
-                  height="340"
-                  className="h-[340px] w-full border-0"
+                  height={340}
+                  className="h-[340px] w-full max-w-full border-0"
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                   loading="lazy"
                 />

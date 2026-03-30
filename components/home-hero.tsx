@@ -91,8 +91,8 @@ function NewsCardOverlay({
 
 export function HomeHero() {
   return (
-    <section className="bg-white py-6 lg:py-8">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+    <section className="w-full bg-white py-6 lg:py-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-4 lg:grid-cols-3 lg:gap-5">
           <NewsCardOverlay
             {...mainFeature}
