@@ -71,7 +71,7 @@ export function SiteHeader() {
               className="h-16 w-auto object-contain drop-shadow-md sm:h-20"
               priority
             />
-            <h1 className="text-center text-2xl font-semibold leading-tight text-white sm:text-3xl sm:leading-snug md:text-4xl">
+            <h1 className="text-center text-2xl font-semibold leading-tight text-white sm:text-3xl sm:leading-snug lg:text-[32px] lg:leading-[36px]">
               <span className="block">Чабанівська територіальна</span>
               <span className="block">громада</span>
             </h1>

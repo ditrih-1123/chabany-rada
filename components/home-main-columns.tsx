@@ -215,7 +215,7 @@ const headNewsLines = [
 function SectionHeading({ children }: { children: ReactNode }) {
   return (
     <div className="mb-4 border-b border-zinc-300">
-      <h2 className="-mb-px inline-block border-b-4 border-[#1A6B20] pb-2 font-sans text-xl font-bold leading-snug tracking-normal text-black sm:text-2xl md:text-3xl">
+      <h2 className="-mb-px inline-block border-b-4 border-[#1A6B20] pb-2 font-sans text-xl font-bold leading-snug tracking-normal text-black sm:text-2xl">
         {children}
       </h2>
     </div>
@@ -248,7 +248,7 @@ function CategoryHeroCard({
           <span className="mb-2 inline-block bg-[#1A6B20] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-white sm:text-xs">
             {tag}
           </span>
-          <h3 className="text-lg font-semibold leading-snug text-white group-hover:underline sm:text-xl md:text-2xl">
+          <h3 className="text-lg font-semibold leading-snug text-white group-hover:underline sm:text-xl">
             {title}
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-white/85 sm:text-base">
@@ -329,7 +329,7 @@ function DocumentsFeatured({
         <span className="mb-2 inline-block w-fit bg-[#1A6B20] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-white sm:text-xs">
           {tag}
         </span>
-        <h3 className="text-lg font-semibold leading-snug text-white group-hover:underline sm:text-xl md:text-2xl">
+        <h3 className="text-lg font-semibold leading-snug text-white group-hover:underline sm:text-xl">
           {title}
         </h3>
       </div>
@@ -390,7 +390,7 @@ export function HomeMainColumns() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                 </div>
                 <div className="pt-3">
-                  <h3 className="text-lg font-semibold leading-snug text-[#1A6B20] sm:text-xl md:text-2xl">
+                  <h3 className="text-lg font-semibold leading-snug text-[#1A6B20] sm:text-xl">
                     {kyivFeatured.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -463,7 +463,7 @@ export function HomeMainColumns() {
                     sizes="112px"
                   />
                 </div>
-                <p className="text-base font-bold leading-snug tracking-wide text-foreground sm:text-lg md:text-xl">
+                <p className="text-base font-bold leading-snug tracking-wide text-foreground sm:text-lg">
                   Олена Соболєва
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -516,7 +516,7 @@ export function HomeMainColumns() {
 
         <div className="mt-6 pt-6">
           <div className="mb-4 flex flex-col gap-6 border-b border-zinc-300 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="-mb-px inline-block min-w-0 border-b-4 border-[#1A6B20] pb-2 font-sans text-xl font-bold leading-snug tracking-normal text-black sm:text-2xl md:text-3xl">
+            <h2 className="-mb-px inline-block min-w-0 border-b-4 border-[#1A6B20] pb-2 font-sans text-xl font-bold leading-snug tracking-normal text-black sm:text-2xl">
               Селищна рада
             </h2>
             <Link

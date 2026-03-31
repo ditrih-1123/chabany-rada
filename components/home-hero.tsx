@@ -101,7 +101,7 @@ export function HomeHero() {
             className="lg:col-span-2 lg:min-h-[470px]"
             sizes="(max-width: 1024px) 100vw, 66vw"
             priority
-            titleClassName="text-lg leading-tight sm:text-xl sm:leading-snug md:text-2xl lg:text-3xl lg:leading-tight"
+            titleClassName="text-lg leading-tight sm:text-xl sm:leading-snug md:text-2xl lg:text-[28px] lg:leading-[34px]"
           />
           <div className="flex flex-col gap-4 lg:h-[470px]">
             {sideNews.map((item) => (
